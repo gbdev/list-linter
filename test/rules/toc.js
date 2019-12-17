@@ -22,7 +22,8 @@ test('toc - missing', async t => {
 	const messages = await lint({config, filename: 'test/fixtures/toc/2.md'});
 	t.deepEqual(messages, [
 		{
-			ruleId: 'awesome/toc',
+			line: 1,
+			ruleId: 'awesome-toc',
 			message: 'Missing or invalid Table of Contents'
 		}
 	]);
@@ -32,15 +33,18 @@ test('toc - missing items', async t => {
 	const messages = await lint({config, filename: 'test/fixtures/toc/3.md'});
 	t.deepEqual(messages, [
 		{
-			ruleId: 'awesome/toc',
+			line: 6,
+			ruleId: 'awesome-toc',
 			message: 'ToC missing item for "Foo B"'
 		},
 		{
-			ruleId: 'awesome/toc',
+			line: 8,
+			ruleId: 'awesome-toc',
 			message: 'ToC item "Bar" does not match corresponding heading "Bar A"'
 		},
 		{
-			ruleId: 'awesome/toc',
+			line: 5,
+			ruleId: 'awesome-toc',
 			message: 'ToC missing item for "Baz"'
 		}
 	]);
@@ -50,7 +54,8 @@ test('toc - exceed max depth', async t => {
 	const messages = await lint({config, filename: 'test/fixtures/toc/4.md'});
 	t.deepEqual(messages, [
 		{
-			ruleId: 'awesome/toc',
+			line: 1,
+			ruleId: 'awesome-toc',
 			message: 'Exceeded max depth of 2 levels'
 		}
 	]);
