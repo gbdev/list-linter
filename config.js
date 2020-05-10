@@ -52,9 +52,9 @@ exports.plugins = [
 	// Third-party plugins
 	// Disabled as it throws `file.warn is not a function`
 	// require('remark-lint-no-empty-sections'),
-	require('remark-lint-no-dead-urls'),
+	//require('remark-lint-no-dead-urls'),
 	require('remark-lint-match-punctuation'),
-	require('remark-lint-no-repeat-punctuation'),
+	//require('remark-lint-no-repeat-punctuation'),
 
 	// Custom plugins
 	...require('./rules')

@@ -2,7 +2,7 @@
 
 module.exports = [
 	require('./heading'),
-	require('./badge'),
+	//require('./badge'),
 	require('./contributing'),
 	require('./git-repo-age'),
 	require('./github'),

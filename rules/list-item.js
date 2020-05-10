@@ -241,6 +241,7 @@ function tokenizeWords(text) {
 }
 
 function validateListItemPrefixCasing(prefix, file) {
+	return true;
 	const strippedPrefix = prefix.value.slice(3);
 	const [firstWord] = tokenizeWords(strippedPrefix);
 
